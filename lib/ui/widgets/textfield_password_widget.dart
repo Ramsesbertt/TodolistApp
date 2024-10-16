@@ -1,7 +1,4 @@
-
-
 import 'package:flutter/material.dart';
-
 import '../general/colors.dart';
 
 class TextFieldPasswordWidget extends StatefulWidget {
