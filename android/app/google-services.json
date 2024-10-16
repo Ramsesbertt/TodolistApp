@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "599851337926",
+    "project_id": "codigo-task-9e052",
+    "storage_bucket": "codigo-task-9e052.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599851337926:android:e03088d707001742046fc7",
+        "android_client_info": {
+          "package_name": "com.utea.firetask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7XjQzOrSAxAqEeLiOzJOngIJ-XmRC5YE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

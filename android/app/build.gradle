@@ -1,0 +1,55 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services" // Complemento de Google services
+}
+
+android {
+    namespace = "com.utea.firetask.firetask"
+    compileSdkVersion 34
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.utea.firetask"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true // Asegúrate de que esté aquí
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Importar el Firebase BoM (Bill of Materials)
+    implementation platform("com.google.firebase:firebase-bom:33.4.0")
+
+    // Agregar los SDK de Firebase que deseas usar
+    implementation "com.google.firebase:firebase-analytics"
+    implementation "com.google.firebase:firebase-firestore"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.facebook.android:facebook-login:latest.release'
+
+    // Otros SDK de Firebase según sea necesario
+    // https://firebase.google.com/docs/android/setup#available-libraries
+}
